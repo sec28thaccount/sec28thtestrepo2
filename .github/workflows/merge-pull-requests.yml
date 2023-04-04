@@ -1,0 +1,28 @@
+name: Merge Pull Requests
+
+on:
+  workflow_dispatch:
+  issues:
+    types: [opened, edited, reopened]
+
+jobs:
+  merge-pull-requests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Merge Pull Requests
+        run: |
+          # Extract the issue number from the event payload
+          issue_number=$(jq --raw-output .issue.number $GITHUB_EVENT_PATH)
+          
+          # Get the list of Pull Requests linked to the issue
+          pr_numbers=$(gh issue view $issue_number --json pull_requests[].number | jq -r '.[]')
+          
+          # Merge each Pull Request
+          for pr_number in $pr_numbers; do
+            git fetch origin pull/$pr_number/head:$pr_number
+            git merge --no-edit $pr_number
+            git push origin HEAD
+          done
