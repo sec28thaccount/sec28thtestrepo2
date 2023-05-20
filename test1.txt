@@ -15,15 +15,10 @@ dssad
 totoot
 dsdd
 ppppppppp
-<<<<<<< main
-testchange
-=======
-isitreflectedInTempFork??
->>>>>>> main
+\
 canyouseeeeeeeeeeee
 change11
 change22
 chnage33
 chage44
 change55
-fdsf
