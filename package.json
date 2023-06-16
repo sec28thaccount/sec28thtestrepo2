@@ -16,4 +16,7 @@
     "url": "https://github.com/sec28thaccount/sec28thtestrepo2/issues"
   },
   "homepage": "https://github.com/sec28thaccount/sec28thtestrepo2#readme"
+"publishConfig": {
+   "@bhavysethtest1:registry": "https://npm.pkg.github.com"
+ }
 }
