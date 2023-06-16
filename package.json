@@ -1,0 +1,19 @@
+{
+  "name": "bhavysethtest1-sec28thtestrepo2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sec28thaccount/sec28thtestrepo2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sec28thaccount/sec28thtestrepo2/issues"
+  },
+  "homepage": "https://github.com/sec28thaccount/sec28thtestrepo2#readme"
+}
